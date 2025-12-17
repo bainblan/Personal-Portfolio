@@ -1,9 +1,9 @@
-import Navbar from '/Navbar';
+import Home from "./Home";
 
-export default function Home() {
+export default function App() {
   return (
     <main>
-      <Navbar />
+      <Home />
     </main>
   );
 }
