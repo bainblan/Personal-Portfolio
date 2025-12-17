@@ -5,7 +5,9 @@ export default function Hero() {
                 <p className="bg-clip-text font-['Inter:Semi_Bold',sans-serif] font-semibold relative shrink-0 text-[80px] text-shadow-[2px_4px_4px_rgba(0,0,0,0.25)]" style={{ WebkitTextFillColor: "transparent", backgroundImage: "linear-gradient(92.479deg, rgb(170, 169, 177) 11.089%, rgb(98, 56, 235) 86.973%)" }}>
                     Baines Blanton
                 </p>
-                <p className="font-['Inter:Light',sans-serif] font-light relative shrink-0 text-[28px] text-white">Computer Science Student</p>
+                <p className="font-['Inter:Light',sans-serif] font-light text-[28px]">
+                    Computer Science Student
+                </p>
             </div>
         </div>
     );
