@@ -3,7 +3,7 @@ import ugaLogo from "../images/university-of-georgia-logo.png"
 
 export default function Education() {
     return (
-        <div className="flex w-full justify-center items-center px-[126px] py-[135px] bg-[#B2B2B2]">
+        <div id="education" className="flex w-full justify-center items-center px-[126px] py-[135px] bg-[#B2B2B2]">
             <div className="flex flex-col justify-center w-[843px] gap-[78px]">
                 <p className="text-black text-center text-[48px] font-bold w-full">EDUCATION</p>
                 <div className="flex flex-col w-full h-fit">

@@ -4,7 +4,7 @@ import hookImg from "../images/hookwritingmeme.jpg"
 
 export default function Projects() {
     return (
-        <div className="flex w-full justify-center items-center px-[126px] py-[135px] bg-[#B2B2B2]">
+        <div id="projects" className="flex w-full justify-center items-center px-[126px] py-[135px] bg-[#B2B2B2]">
             <div className="flex flex-col justify-center w-[843px] gap-[78px]">
                 <p className="text-black text-center text-[48px] font-bold w-full">PROJECTS</p>
                 <div className="flex flex-col gap-[58px] w-full h-fit">
