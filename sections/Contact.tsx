@@ -136,12 +136,12 @@ export default function Contact() {
 
           {/* Success Message */}
           {successMessage && (
-            <p className="text-green-600 text-[16px] font-semibold">{successMessage}</p>
+            <p className="text-green-600 text-[24px] font-semibold">{successMessage}</p>
           )}
 
           {/* Error Message */}
           {errorMessage && (
-            <p className="text-red-500 text-[16px] font-semibold">{errorMessage}</p>
+            <p className="text-red-500 text-[24px] font-semibold">{errorMessage}</p>
           )}
         </form>
       </div>

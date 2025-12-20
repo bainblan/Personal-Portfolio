@@ -87,7 +87,7 @@ export const submitContactForm = async (formData: ContactFormData) => {
       },
       body: JSON.stringify({
         from: 'onboarding@resend.dev',
-        to: 'bainesblanton@gmail.com',
+        to: 'baines.blanton@uga.edu',
         subject: `New Contact Form Submission from ${formData.name}`,
         html: `
           <h2>New Contact Message</h2>
