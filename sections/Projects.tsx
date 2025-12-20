@@ -1,6 +1,6 @@
-import Image from "next/image"
-import hookImg from "../images/hookwritingmeme.jpg"
-
+import Project from "../components/Project";
+import botannica from "../images/botannica2.png";
+import greentabs from "../images/greentabs.png";
 
 export default function Projects() {
     return (
@@ -8,48 +8,14 @@ export default function Projects() {
             <div className="flex flex-col justify-center w-[843px] gap-[78px]">
                 <p className="text-black text-center text-[48px] font-bold w-full">PROJECTS</p>
                 <div className="flex flex-col gap-[58px] w-full h-fit">
-                    <div className="flex flex-row relative rounded-[52px] w-full px-[38px] py-[27px] bg-[#333c66] gap-[20px] items-center">
-                        <div className="w-[321px] h-[321px]">
-                            <Image
-                                src={hookImg}
-                                alt="Project Placeholder"
-                                className="w-full h-full object-cover rounded-[12px]"
-                                sizes="(max-width: 768px) 100vw, 321px"
-                            />
-                        </div>
-                        <div className="flex flex-col gap-[15px] self-stretch text-white w-[353px]">
-                            <p className="text-white font-bold text-[32px] w-full">Project Name</p>
-                            <p className="w-full">My project did bloopity blah blah all day all the time on the grind prime time 99 alex stein he da pimp on a blimp eating steak and shrimp</p>
-                        </div>
-                    </div>
-                    <div className="flex flex-row relative rounded-[52px] w-full px-[38px] py-[27px] bg-[#333c66] gap-[20px] items-center">
-                        <div className="w-[321px] h-[321px]">
-                            <Image
-                                src={hookImg}
-                                alt="Project Placeholder"
-                                className="w-full h-full object-cover rounded-[12px]"
-                                sizes="(max-width: 768px) 100vw, 321px"
-                            />
-                        </div>
-                        <div className="flex flex-col gap-[15px] self-stretch text-white w-[353px]">
-                            <p className="text-white font-bold text-[32px] w-full">Project Name</p>
-                            <p className="w-full">My project did bloopity blah blah all day all the time on the grind prime time 99 alex stein he da pimp on a blimp eating steak and shrimp</p>
-                        </div>
-                    </div>
-                    <div className="flex flex-row relative rounded-[52px] w-full px-[38px] py-[27px] bg-[#333c66] gap-[20px] items-center">
-                        <div className="w-[321px] h-[321px]">
-                            <Image
-                                src={hookImg}
-                                alt="Project Placeholder"
-                                className="w-full h-full object-cover rounded-[12px]"
-                                sizes="(max-width: 768px) 100vw, 321px"
-                            />
-                        </div>
-                        <div className="flex flex-col gap-[15px] self-stretch text-white w-[353px]">
-                            <p className="text-white font-bold text-[32px] w-full">Project Name</p>
-                            <p className="w-full">My project did bloopity blah blah all day all the time on the grind prime time 99 alex stein he da pimp on a blimp eating steak and shrimp</p>
-                        </div>
-                    </div>
+                    <Project name="Botannica" descr="Served as Project Leader for a team developing Botannica, 
+                    a website that finds trails and parks in your local area by calling Open Athens API, 
+                    lets you log in with your own username and password, schedule group meetups, join already scheduled meetups, 
+                    leave park reviews. We started with Figma to prototype the design. Developed using React for website structure, 
+                    Node.js and Next.js for full-stack functionality, Typescript for authentication, and MongoDB for the database" pic={botannica} />
+                    <Project name="GreenTabs" descr="Finds the energy you use from AI prompting (Figma design only). 
+                    Gives you your energy usage from any day, week, month, or year. Calculates energy consumption projections based on global trends. 
+                    Includes a Spotify Wrapped feature except it shows your energy usage for the year." pic={greentabs} />
                 </div>
             </div>
         </div>
