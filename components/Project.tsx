@@ -1,6 +1,6 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
-export default function Project({ name, descr, pic }: { name: string, descr: string, pic: string }) {
+export default function Project({ name, descr, pic }: { name: string, descr: string, pic: StaticImageData }) {
     return (
         <div className="flex flex-row relative rounded-[52px] w-full px-[38px] py-[27px] bg-[#333c66] gap-[20px] items-center">
             <div className="w-[321px] h-[321px]">
