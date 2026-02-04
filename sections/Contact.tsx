@@ -61,7 +61,7 @@ export default function Contact() {
   return (
     <div
       id="contact"
-      className="flex w-full justify-center items-center px-[126px] py-[135px] bg-[#B2B2B2]"
+      className="flex w-full justify-center items-center px-[126px] py-[135px]"
     >
       <div className="flex flex-col justify-between w-[786px]">
         <p className="text-black text-center text-[48px] font-bold w-full mb-[40px]">

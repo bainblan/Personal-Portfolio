@@ -4,9 +4,9 @@ import greentabs from "../images/greentabs.png";
 
 export default function Projects() {
     return (
-        <div id="projects" className="flex w-full justify-center items-center px-[126px] py-[135px] bg-[#B2B2B2]">
+        <div id="projects" className="flex w-full justify-center items-center px-[126px] py-[135px]">
             <div className="flex flex-col justify-center w-[843px] gap-[78px]">
-                <p className="text-black text-center text-[48px] font-bold w-full">PROJECTS</p>
+                <p className="text-white text-center text-[48px] font-bold w-full">PROJECTS</p>
                 <div className="flex flex-col gap-[58px] w-full h-fit">
                     <Project name="Botannica" descr="Served as Project Leader for a team developing Botannica, 
                     a website that finds trails and parks in your local area by calling Open Athens API, 

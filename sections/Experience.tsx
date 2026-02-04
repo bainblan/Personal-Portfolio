@@ -3,7 +3,7 @@ import cpiLogo from "../images/cpilogo.png";
 
 export default function Experience() {
     return (
-        <div id="experience" className="flex w-full justify-center items-center px-4 sm:px-8 md:px-16 lg:px-[126px] py-12 sm:py-16 md:py-24 lg:py-[135px] bg-[#B2B2B2]">
+        <div id="experience" className="flex w-full justify-center items-center px-4 sm:px-8 md:px-16 lg:px-[126px] py-12 sm:py-16 md:py-24 lg:py-[135px]">
             <div className="flex flex-col w-full max-w-[843px] gap-8 sm:gap-12 md:gap-[78px]">
                 <p className="text-black text-center text-3xl sm:text-4xl md:text-[48px] font-bold w-full">EXPERIENCE</p>
                 <div className="flex flex-col justify-between w-full gap-[25px]">

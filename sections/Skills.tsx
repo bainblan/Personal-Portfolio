@@ -2,9 +2,9 @@ import Skill from "../components/Skill";
 
 export default function Skills() {
     return (
-        <div id="skills" className="flex w-full justify-center items-center px-[126px] py-[135px] bg-[#B2B2B2]">
+        <div id="skills" className="flex w-full justify-center items-center px-[126px] py-[135px]">
             <div className="flex flex-col w-[399px] gap-[78px]">
-                <p className="text-black text-center text-[48px] font-bold w-full">SKILLS</p>
+                <p className="text-white text-center text-[48px] font-bold w-full">SKILLS</p>
                 <div className="flex flex-col gap-[10px] w-fit h-fit items-center mx-auto">     
                     <Skill name="Java" />
                     <Skill name="Python" />
