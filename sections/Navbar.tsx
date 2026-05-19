@@ -17,7 +17,6 @@ export default function Navbar() {
                 <button className="cursor-pointer" onClick={() => handleClick("Experience")}>Experience</button>
                 <button className="cursor-pointer" onClick={() => handleClick("Skills")}>Skills</button>
                 <button className="cursor-pointer" onClick={() => handleClick("Education")}>Education</button>
-                <button className="cursor-pointer" onClick={() => handleClick("Contact")}>Contact</button>
             </div>
         </div>
     );

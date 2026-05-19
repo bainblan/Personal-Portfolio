@@ -4,7 +4,6 @@ import Projects from "../sections/Projects";
 import Experience from "../sections/Experience";
 import Skills from "../sections/Skills";
 import Education from "../sections/Education";
-import Contact from "../sections/Contact";
 import Footer from "../sections/Footer";
 
 export default function Home() {
@@ -16,7 +15,6 @@ export default function Home() {
             <Experience />
             <Skills />
             <Education />
-            <Contact />
             <Footer />
         </>
     );

@@ -1,3 +1,7 @@
+'use client';
+
+import { ThemeToggler } from "@/components/animate-ui/primitives/effects/theme-toggler";
+
 export default function Hero() {
     return (
         <div id="hero" className="content-stretch flex h-[973px] items-center justify-center overflow-clip p-[10px] relative shrink-0 w-full" data-name="Hero">
@@ -8,6 +12,7 @@ export default function Hero() {
                 <p className="font-['Inter:Light',sans-serif] font-light text-[28px]">
                     Computer Science Student
                 </p>
+                <ThemeToggler />
             </div>
         </div>
     );

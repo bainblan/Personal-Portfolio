@@ -19,26 +19,13 @@ This is a **Next.js 16 personal portfolio** using the App Router with React 19, 
 
 - **`app/`** - Next.js App Router pages and layouts
   - `Home.tsx` is the main orchestrator that composes all sections
-  - `actions/contact.ts` contains the server action for form submission
-- **`sections/`** - Full-width page sections (Navbar, Hero, Projects, Skills, Experience, Education, Contact, Footer)
+- **`sections/`** - Full-width page sections (Navbar, Hero, Projects, Skills, Experience, Education, Footer)
 - **`components/`** - Reusable UI components (Project card, Skill badge)
-- **`utils/supabase/`** - Supabase client configuration (browser and server clients)
 
 ### Key Patterns
 
-- **Server Components by default** - Use `'use client'` directive only when interactivity is needed (forms, navigation with JS)
-- **Server Actions** - Backend logic in `app/actions/` with `'use server'` directive
+- **Server Components by default** - Use `'use client'` directive only when interactivity is needed (navigation with JS)
 - **Styling** - Tailwind utility classes inline in JSX; theme colors defined in `globals.css`
-
-### External Services
-
-- **Supabase** - PostgreSQL database for storing contact form submissions
-- **Resend** - Email notification service for contact form alerts
-
-Environment variables required in `.env.local`:
-- `NEXT_PUBLIC_SUPABASE_URL`
-- `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY`
-- `RESEND_API_KEY`
 
 ### Navigation
 
