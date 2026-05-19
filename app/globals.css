@@ -53,6 +53,8 @@ html {
 body {
   font-family: var(--font-inter, 'Inter', Arial, Helvetica, sans-serif);
   font-weight: 400;
+  background-color: #ffffff;
+  color: #D4AF37;
 }
 
 :root {
@@ -127,8 +129,5 @@ body {
 @layer base {
   * {
     @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
   }
 }

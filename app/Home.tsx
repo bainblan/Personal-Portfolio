@@ -1,9 +1,5 @@
 import Navbar from "../sections/Navbar";
 import Hero from "../sections/Hero";
-import Projects from "../sections/Projects";
-import Experience from "../sections/Experience";
-import Skills from "../sections/Skills";
-import Education from "../sections/Education";
 import Footer from "../sections/Footer";
 
 export default function Home() {
@@ -11,10 +7,6 @@ export default function Home() {
         <>
             <Navbar />
             <Hero />
-            <Projects />
-            <Experience />
-            <Skills />
-            <Education />
             <Footer />
         </>
     );

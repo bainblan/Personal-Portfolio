@@ -1,6 +1,6 @@
 'use client';
 
-import { ThemeToggler } from "@/components/animate-ui/primitives/effects/theme-toggler";
+import { ThemeTogglerButton } from "@/components/animate-ui/components/buttons/theme-toggler";
 
 export default function Hero() {
     return (
@@ -12,7 +12,7 @@ export default function Hero() {
                 <p className="font-['Inter:Light',sans-serif] font-light text-[28px]">
                     Computer Science Student
                 </p>
-                <ThemeToggler />
+                <ThemeTogglerButton />
             </div>
         </div>
     );

@@ -1,22 +1,32 @@
 "use client";
 
-export default function Navbar() {
+import { useState } from "react";
+import { Sling as Hamburger } from "hamburger-react";
 
-    const handleClick = (section: string) => {
-        const id = section.toLowerCase();
-        const el = document.getElementById(id);
-        if (el) {
-            el.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-    };
+const LINKS = ["ABOUT", "WORK", "PROJECTS", "CONTACT"];
+
+export default function Navbar() {
+    const [isOpen, setOpen] = useState(false);
 
     return (
-        <div className="flex justify-center items-center bg-[#522e8b] h-[58px] w-full px-6">
-            <div className="flex justify-between w-[365px] text-[12px]">
-                <button className="cursor-pointer" onClick={() => handleClick("Projects")}>Projects</button>
-                <button className="cursor-pointer" onClick={() => handleClick("Experience")}>Experience</button>
-                <button className="cursor-pointer" onClick={() => handleClick("Skills")}>Skills</button>
-                <button className="cursor-pointer" onClick={() => handleClick("Education")}>Education</button>
+        <div className="flex justify-between items-center bg-[#D4AF37] h-[58px] w-full px-6 text-black">
+            <p className="font-semibold text-[18px]">Baines Blanton</p>
+            <div className="flex items-center gap-6">
+                <div
+                    className={`flex items-center gap-6 text-[14px] font-medium transition-all duration-500 ease-out ${
+                        isOpen
+                            ? "opacity-100 translate-x-0"
+                            : "opacity-0 translate-x-8 pointer-events-none"
+                    }`}
+                    aria-hidden={!isOpen}
+                >
+                    {LINKS.map((label) => (
+                        <button key={label} className="cursor-pointer">
+                            {label}
+                        </button>
+                    ))}
+                </div>
+                <Hamburger toggled={isOpen} toggle={setOpen} size={24} color="#000000" />
             </div>
         </div>
     );
