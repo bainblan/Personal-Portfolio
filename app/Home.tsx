@@ -3,6 +3,7 @@ import Hero from "../sections/Hero";
 import Heights from "../sections/Heights";
 import About from "../sections/About";
 import Winner from "../sections/Winner";
+import Work from "../sections/Work";
 import Footer from "../sections/Footer";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
             <Heights />
             <About />
             <Winner />
+            <Work />
             <Footer />
         </>
     );
