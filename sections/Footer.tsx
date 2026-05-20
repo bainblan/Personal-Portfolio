@@ -1,18 +1,33 @@
 import Link from "next/link";
-import { Github, Linkedin } from "lucide-react";
 
 export default function Footer() {
     return (
-        <div id="footer" className="flex w-full justify-between items-center h-[58px] px-6 bg-[#D4AF37] text-white text-[12px]">
-            <p>Copyright © 2025 Baines Blanton</p>
-            <div className="flex w-[70px] justify-between items-center text-white">
-                <Link href="https://github.com/bainblan" target="_blank" aria-label="GitHub">
-                    <Github className="w-[20px] h-[20px] cursor-pointer" />
+        <footer id="footer" className="bg-[#750af5] text-white w-full px-[60px] py-[60px]">
+            <p className="text-[12px] tracking-[0.2em] uppercase">Get in touch</p>
+            <div className="flex flex-col items-start mt-[20px] gap-[12px]">
+                <Link
+                    href="https://www.linkedin.com/in/baines-blanton/"
+                    target="_blank"
+                    className="text-[80px] font-bold leading-none transition-colors duration-200 hover:text-[#750af5]"
+                >
+                    LinkedIn &rarr;
                 </Link>
-                <Link href="https://www.linkedin.com/in/baines-blanton-34514a331/" target="_blank" aria-label="LinkedIn">
-                    <Linkedin className="w-[20px] h-[20px] cursor-pointer" />
+                <Link
+                    href="https://github.com/bainblan"
+                    target="_blank"
+                    className="text-[80px] font-bold leading-none transition-colors duration-200 hover:text-[#750af5]"
+                >
+                    GitHub &rarr;
                 </Link>
             </div>
-        </div>
+            <div className="flex flex-wrap gap-x-[40px] gap-y-[8px] mt-[40px] text-[16px]">
+                <a href="mailto:bainesblanton@gmail.com" className="transition-colors duration-200 hover:text-[#750af5]">bainesblanton@gmail.com</a>
+                <a href="tel:+12298775950" className="transition-colors duration-200 hover:text-[#750af5]">(229) 877-5950</a>
+            </div>
+            <div className="flex justify-between items-center mt-[60px] text-[12px]">
+                <span>LinkedIn</span>
+                <span>© 2026 Baines Blanton</span>
+            </div>
+        </footer>
     );
 }

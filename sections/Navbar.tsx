@@ -1,16 +1,22 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { Sling as Hamburger } from "hamburger-react";
 
-const LINKS = ["ABOUT", "WORK", "PROJECTS", "CONTACT"];
+const LINKS = [
+    { label: "ABOUT", href: "#about" },
+    { label: "WORK", href: "#work" },
+    { label: "PROJECTS", href: "#projects" },
+    { label: "CONTACT", href: "#footer" },
+];
 
 export default function Navbar() {
     const [isOpen, setOpen] = useState(false);
 
     return (
-        <div className="grid grid-cols-3 items-center bg-[#D4AF37] h-[58px] w-full px-6 text-white">
-            <p className="font-semibold text-[18px]">Baines Blanton</p>
+        <div className="grid grid-cols-3 items-center bg-[#750af5] h-[58px] w-full px-6 text-white">
+            <Link href="/#hero" className="font-semibold text-[18px] transition-colors duration-200 hover:text-[#001F3F]">BAINES BLANTON</Link>
             <p className="text-center font-semibold tracking-widest text-[14px]">SOFTWARE ENGINEER</p>
             <div className="flex items-center gap-6 justify-end">
                 <div
@@ -21,10 +27,15 @@ export default function Navbar() {
                     }`}
                     aria-hidden={!isOpen}
                 >
-                    {LINKS.map((label) => (
-                        <button key={label} className="cursor-pointer">
+                    {LINKS.map(({ label, href }) => (
+                        <a
+                            key={label}
+                            href={href}
+                            onClick={() => setOpen(false)}
+                            className="cursor-pointer transition-colors duration-200 hover:text-[#001F3F]"
+                        >
                             {label}
-                        </button>
+                        </a>
                     ))}
                 </div>
                 <Hamburger toggled={isOpen} toggle={setOpen} size={24} color="#FFFFFF" />

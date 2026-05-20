@@ -6,16 +6,24 @@ export default function Hero() {
                     <p>Baines</p>
                     <p>Blanton</p>
                 </div>
-                <div className="flex flex-col gap-[14px] p-[20px] rounded-[24px] border-2 border-[#D4AF37]">
-                    {["ABOUT", "WORK", "PROJECTS", "CONTACT"].map((label) => (
-                        <button
+                <nav className="flex flex-col min-w-[340px] border-t border-[#750af5]/40">
+                    {[
+                        { label: "ABOUT", href: "#about" },
+                        { label: "WORK", href: "#work" },
+                        { label: "PROJECTS", href: "#projects" },
+                        { label: "CONTACT", href: "#footer" },
+                    ].map(({ label, href }, i) => (
+                        <a
                             key={label}
-                            className="rounded-full bg-[#D4AF37] text-white px-[28px] py-[10px] text-[16px] font-medium cursor-pointer transition-opacity hover:opacity-90"
+                            href={href}
+                            className="group flex items-center gap-[24px] py-[20px] border-b border-[#750af5]/40 transition-colors duration-200 hover:text-[#750af5]"
                         >
-                            {label}
-                        </button>
+                            <span className="font-mono text-[14px] opacity-50">{String(i + 1).padStart(2, "0")}</span>
+                            <span className="flex-1 text-[26px] font-semibold tracking-wide">{label}</span>
+                            <span className="text-[20px] transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
+                        </a>
                     ))}
-                </div>
+                </nav>
             </div>
             <svg
                 viewBox="0 0 1440 200"
@@ -23,7 +31,7 @@ export default function Hero() {
                 className="absolute bottom-0 left-0 w-full h-[220px] block pointer-events-none"
                 aria-hidden
             >
-                <path d="M0,200 C720,200 720,0 1440,0 L1440,200 Z" fill="#D4AF37" />
+                <path d="M0,200 C720,200 720,0 1440,0 L1440,200 Z" fill="#750af5" />
             </svg>
         </div>
     );
