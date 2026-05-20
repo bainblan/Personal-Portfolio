@@ -1,0 +1,38 @@
+import Image from "next/image";
+import hackathon from "../images/Hackathon.jpg";
+
+export default function Winner() {
+    return (
+        <>
+            <section id="winner" className="flex flex-row items-center justify-center gap-[60px] w-full bg-[#D4AF37] px-[126px] py-[120px]">
+                <div className="flex-1 max-w-[600px]">
+                    <Image
+                        src={hackathon}
+                        alt="UGA Hacks XI award"
+                        className="w-full h-auto rounded-[24px]"
+                    />
+                </div>
+                <div className="flex flex-1 flex-col items-start gap-[30px] max-w-[600px]">
+                    <h2 className="text-white font-bold text-[96px] leading-[0.9]">WINNER</h2>
+                    <p className="text-white text-[20px] leading-relaxed">
+                        Baines and friends won &apos;Best .tech Domain&apos; at UGA Hacks XI for Knocklock.tech
+                    </p>
+                    <a
+                        href="#projects"
+                        className="rounded-full bg-white text-[#D4AF37] px-[36px] py-[14px] text-[18px] font-semibold cursor-pointer transition-opacity hover:opacity-90"
+                    >
+                        SEE PROJECTS
+                    </a>
+                </div>
+            </section>
+             <svg
+                viewBox="0 0 1440 200"
+                preserveAspectRatio="none"
+                className="w-full h-[220px] block -scale-y-100"
+                aria-hidden
+            >
+                <path d="M0,200 C720,200 720,0 1440,0 L1440,200 Z" fill="#D4AF37" />
+            </svg>
+        </>
+    );
+}
