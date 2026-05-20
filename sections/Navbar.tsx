@@ -9,9 +9,10 @@ export default function Navbar() {
     const [isOpen, setOpen] = useState(false);
 
     return (
-        <div className="flex justify-between items-center bg-[#D4AF37] h-[58px] w-full px-6 text-black">
+        <div className="grid grid-cols-3 items-center bg-[#D4AF37] h-[58px] w-full px-6 text-white">
             <p className="font-semibold text-[18px]">Baines Blanton</p>
-            <div className="flex items-center gap-6">
+            <p className="text-center font-semibold tracking-widest text-[14px]">SOFTWARE ENGINEER</p>
+            <div className="flex items-center gap-6 justify-end">
                 <div
                     className={`flex items-center gap-6 text-[14px] font-medium transition-all duration-500 ease-out ${
                         isOpen
@@ -26,7 +27,7 @@ export default function Navbar() {
                         </button>
                     ))}
                 </div>
-                <Hamburger toggled={isOpen} toggle={setOpen} size={24} color="#000000" />
+                <Hamburger toggled={isOpen} toggle={setOpen} size={24} color="#FFFFFF" />
             </div>
         </div>
     );
