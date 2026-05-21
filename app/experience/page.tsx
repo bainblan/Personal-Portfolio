@@ -44,20 +44,20 @@ export default function ExperiencePage() {
         <>
             <Navbar />
             <main className="w-full">
-                <header className="px-[126px] pt-[120px] pb-[60px]">
-                    <h1 className="font-bold text-[96px] leading-[0.9]">EXPERIENCE</h1>
+                <header className="px-6 md:px-[126px] pt-16 md:pt-[120px] pb-10 md:pb-[60px]">
+                    <h1 className="font-bold text-[48px] md:text-[96px] leading-[0.9]">EXPERIENCE</h1>
                 </header>
-                <div className="flex flex-col gap-[100px] px-[126px] pb-[160px]">
+                <div className="flex flex-col gap-16 md:gap-[100px] px-6 md:px-[126px] pb-20 md:pb-[160px]">
                     {EXPERIENCES.map((exp, i) => (
                         <article
                             key={i}
-                            className={`flex flex-col ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} items-center gap-[60px]`}
+                            className={`flex flex-col ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} items-center gap-8 md:gap-[60px]`}
                         >
                             <Link
                                 href={exp.href}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group relative block flex-1 w-full max-w-[600px] aspect-[4/3] overflow-hidden rounded-[24px]"
+                                className="group relative block w-full md:flex-1 max-w-[600px] aspect-[4/3] overflow-hidden rounded-[24px]"
                             >
                                 <Image
                                     src={exp.image}
@@ -71,11 +71,11 @@ export default function ExperiencePage() {
                                     </span>
                                 </div>
                             </Link>
-                            <div className="flex-1 max-w-[600px] flex flex-col gap-[16px]">
-                                <h2 className="font-bold text-[48px] leading-[1]">{exp.company}</h2>
-                                <p className="text-[22px] font-medium italic opacity-80">{exp.jobTitle}</p>
-                                <p className="text-[13px] uppercase tracking-[0.2em] opacity-60">{exp.dates}</p>
-                                <p className="text-[18px] leading-relaxed">{exp.description}</p>
+                            <div className="w-full md:flex-1 max-w-[600px] flex flex-col gap-[12px] md:gap-[16px]">
+                                <h2 className="font-bold text-[32px] md:text-[48px] leading-[1]">{exp.company}</h2>
+                                <p className="text-[18px] md:text-[22px] font-medium italic opacity-80">{exp.jobTitle}</p>
+                                <p className="text-[12px] md:text-[13px] uppercase tracking-[0.2em] opacity-60">{exp.dates}</p>
+                                <p className="text-[16px] md:text-[18px] leading-relaxed">{exp.description}</p>
                             </div>
                         </article>
                     ))}

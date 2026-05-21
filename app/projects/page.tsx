@@ -75,17 +75,17 @@ export default function ProjectsPage() {
         <>
             <Navbar />
             <main className="w-full">
-                <header className="flex items-end justify-between px-[126px] pt-[120px] pb-[60px] gap-[40px]">
-                    <h1 className="font-bold text-[96px] leading-[0.9]">PROJECTS</h1>
-                    <p className="text-[#001F3F]/75 dark:text-white/75 text-[18px] max-w-[420px] pb-[12px]">
+                <header className="flex flex-col md:flex-row md:items-end md:justify-between px-6 md:px-[126px] pt-16 md:pt-[120px] pb-10 md:pb-[60px] gap-4 md:gap-[40px]">
+                    <h1 className="font-bold text-[48px] md:text-[96px] leading-[0.9]">PROJECTS</h1>
+                    <p className="text-[#001F3F]/75 dark:text-white/75 text-[16px] md:text-[18px] max-w-[420px] md:pb-[12px]">
                         A selection of things I&apos;ve built. Click to view the project.
                     </p>
                 </header>
-                <div className="grid grid-cols-4 gap-[24px] px-[126px] pb-[160px]">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-[24px] px-6 md:px-[126px] pb-20 md:pb-[160px]">
                     {PROJECTS.map((p) => (
                         <article
                             key={p.name}
-                            className={`${p.span === "wide" ? "col-span-2" : "col-span-1"} group bg-white dark:bg-[#171717] rounded-[24px] overflow-hidden flex flex-col border-2 border-[#750af5]/15 dark:border-[#4c0a99]/40`}
+                            className={`${p.span === "wide" ? "md:col-span-2" : "md:col-span-1"} group bg-white dark:bg-[#171717] rounded-[24px] overflow-hidden flex flex-col border-2 border-[#750af5]/15 dark:border-[#4c0a99]/40`}
                         >
                             <a
                                 href={p.github}
@@ -101,12 +101,12 @@ export default function ProjectsPage() {
                                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                                 />
                             </a>
-                            <div className="flex flex-col gap-[10px] p-[28px]">
+                            <div className="flex flex-col gap-[10px] p-5 md:p-[28px]">
                                 <p className="text-[12px] tracking-[0.2em] uppercase text-[#750af5] dark:text-[#a06bff] font-semibold">
                                     {p.date}
                                 </p>
-                                <h2 className="text-[#001F3F] dark:text-white font-bold text-[28px] leading-tight">{p.name}</h2>
-                                <p className="text-[#001F3F]/75 dark:text-white/75 text-[16px] leading-relaxed">{p.description}</p>
+                                <h2 className="text-[#001F3F] dark:text-white font-bold text-[22px] md:text-[28px] leading-tight">{p.name}</h2>
+                                <p className="text-[#001F3F]/75 dark:text-white/75 text-[15px] md:text-[16px] leading-relaxed">{p.description}</p>
                             </div>
                         </article>
                     ))}
