@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import cpi from "../images/CPI_simple_logo.png";
 import ssrl from "../images/ssrl_logo.png";
-import airForce from "../images/air_force_logo.png";
+import airForce from "../images/silver_airforce.png";
 
 export default function Work() {
     return (
@@ -17,7 +17,7 @@ export default function Work() {
                         SEE EXPERIENCE
                     </Link>
                 </div>
-                <div className="flex-1 max-w-[620px] flex flex-row gap-[24px] p-[32px] rounded-[24px] border-2 border-[#750af5] dark:border-[#4c0a99]">
+                <div className="flex-1 max-w-[620px] flex flex-row gap-[24px] p-[32px] rounded-[24px] bg-[#750af5] dark:bg-[#4c0a99]">
                     <Image src={cpi} alt="Construction Partners Inc" className="w-full h-[120px] object-contain" />
                     <Image src={ssrl} alt="SSRL" className="w-full h-[120px] object-contain" />
                     <Image src={airForce} alt="Air Force" className="w-full h-[120px] object-contain" />

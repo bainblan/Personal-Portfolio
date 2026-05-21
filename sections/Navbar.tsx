@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { Sling as Hamburger } from "hamburger-react";
 import { useTheme } from "next-themes";
@@ -14,12 +14,7 @@ const LINKS = [
 
 export default function Navbar() {
     const [isOpen, setOpen] = useState(false);
-    const [mounted, setMounted] = useState(false);
     const { resolvedTheme, setTheme } = useTheme();
-
-    useEffect(() => setMounted(true), []);
-
-    const isDark = resolvedTheme === "dark";
 
     return (
         <div className="grid grid-cols-3 items-center bg-[#750af5] dark:bg-[#4c0a99] h-[58px] w-full px-6 text-white">
@@ -47,15 +42,12 @@ export default function Navbar() {
                 </div>
                 <button
                     type="button"
-                    onClick={() => setTheme(isDark ? "light" : "dark")}
+                    onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
                     aria-label="Toggle dark mode"
                     className="flex items-center justify-center w-[36px] h-[36px] rounded-full transition-colors duration-200 hover:text-[#001F3F] dark:hover:text-[#a06bff] cursor-pointer"
                 >
-                    {mounted ? (
-                        isDark ? <LuSun size={20} /> : <LuMoon size={20} />
-                    ) : (
-                        <span className="w-[20px] h-[20px]" />
-                    )}
+                    <LuMoon size={20} className="block dark:hidden" />
+                    <LuSun size={20} className="hidden dark:block" />
                 </button>
                 <Hamburger toggled={isOpen} toggle={setOpen} size={24} color="#FFFFFF" />
             </div>

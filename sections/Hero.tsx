@@ -9,8 +9,8 @@ export default function Hero() {
                 <nav className="flex flex-col min-w-[340px] border-t border-[#750af5]/40 dark:border-[#a06bff]/40">
                     {[
                         { label: "ABOUT", href: "#about" },
+                        { label: "PROJECTS", href: "#winner" },
                         { label: "WORK", href: "#work" },
-                        { label: "PROJECTS", href: "/projects" },
                         { label: "CONTACT", href: "#footer" },
                     ].map(({ label, href }, i) => (
                         <a
