@@ -1,7 +1,7 @@
 import Image, { type StaticImageData } from "next/image";
 import Navbar from "@/sections/Navbar";
 import Footer from "@/sections/Footer";
-import ymp from "@/images/youngmindstitle.png";
+import ymp from "@/images/ympfaith.png";
 import knocklock from "@/images/knocklock.png";
 import bizniz from "@/images/biznizpic.png";
 import space from "@/images/ssrlinterviewproj.png";

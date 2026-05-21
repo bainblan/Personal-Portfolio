@@ -8,15 +8,10 @@ export default function About() {
                 <div className="flex flex-1 flex-col items-start gap-[30px] max-w-[600px]">
                     <h2 className="font-bold text-[96px] leading-[0.9]">ABOUT</h2>
                     <p className="text-[18px] leading-relaxed">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat.
+                        Baines is a full-stack developer and computer science student at the University of Georgia, and the current Frontend Web Developer for UGA&apos;s Small Satellite Research Laboratory. Most of his free time goes into building web applications; a few of his favorites are on the projects page.
                     </p>
                     <p className="text-[18px] leading-relaxed">
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                        eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                        sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        This summer, Baines is interning at Robins Air Force Base, working on software testing and training AI models. He&apos;ll graduate with his B.S. in December 2026, then continue straight into a Master&apos;s in Computer Science at UGA through the Double Dawgs program, finishing in December 2027.
                     </p>
                 </div>
                 <div className="flex-1 max-w-[500px]">
