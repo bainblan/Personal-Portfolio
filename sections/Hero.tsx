@@ -6,17 +6,17 @@ export default function Hero() {
                     <p>Baines</p>
                     <p>Blanton</p>
                 </div>
-                <nav className="flex flex-col min-w-[340px] border-t border-[#750af5]/40">
+                <nav className="flex flex-col min-w-[340px] border-t border-[#750af5]/40 dark:border-[#a06bff]/40">
                     {[
                         { label: "ABOUT", href: "#about" },
                         { label: "WORK", href: "#work" },
-                        { label: "PROJECTS", href: "#projects" },
+                        { label: "PROJECTS", href: "/projects" },
                         { label: "CONTACT", href: "#footer" },
                     ].map(({ label, href }, i) => (
                         <a
                             key={label}
                             href={href}
-                            className="group flex items-center gap-[24px] py-[20px] border-b border-[#750af5]/40 transition-colors duration-200 hover:text-[#750af5]"
+                            className="group flex items-center gap-[24px] py-[20px] border-b border-[#750af5]/40 dark:border-[#a06bff]/40 transition-colors duration-200 hover:text-[#750af5] dark:hover:text-[#a06bff]"
                         >
                             <span className="font-mono text-[14px] opacity-50">{String(i + 1).padStart(2, "0")}</span>
                             <span className="flex-1 text-[26px] font-semibold tracking-wide">{label}</span>
@@ -31,7 +31,7 @@ export default function Hero() {
                 className="absolute bottom-0 left-0 w-full h-[220px] block pointer-events-none"
                 aria-hidden
             >
-                <path d="M0,200 C720,200 720,0 1440,0 L1440,200 Z" fill="#750af5" />
+                <path d="M0,200 C720,200 720,0 1440,0 L1440,200 Z" className="fill-[#750af5] dark:fill-[#4c0a99]" />
             </svg>
         </div>
     );

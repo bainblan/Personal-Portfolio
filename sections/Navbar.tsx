@@ -1,22 +1,29 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Sling as Hamburger } from "hamburger-react";
+import { useTheme } from "next-themes";
+import { LuSun, LuMoon } from "react-icons/lu";
 
 const LINKS = [
-    { label: "ABOUT", href: "#about" },
-    { label: "WORK", href: "#work" },
-    { label: "PROJECTS", href: "#projects" },
-    { label: "CONTACT", href: "#footer" },
+    { label: "HOME", href: "/" },
+    { label: "EXPERIENCE", href: "/experience" },
+    { label: "PROJECTS", href: "/projects" },
 ];
 
 export default function Navbar() {
     const [isOpen, setOpen] = useState(false);
+    const [mounted, setMounted] = useState(false);
+    const { resolvedTheme, setTheme } = useTheme();
+
+    useEffect(() => setMounted(true), []);
+
+    const isDark = resolvedTheme === "dark";
 
     return (
-        <div className="grid grid-cols-3 items-center bg-[#750af5] h-[58px] w-full px-6 text-white">
-            <Link href="/#hero" className="font-semibold text-[18px] transition-colors duration-200 hover:text-[#001F3F]">BAINES BLANTON</Link>
+        <div className="grid grid-cols-3 items-center bg-[#750af5] dark:bg-[#4c0a99] h-[58px] w-full px-6 text-white">
+            <Link href="/#hero" className="font-semibold text-[18px] transition-colors duration-200 hover:text-[#001F3F] dark:hover:text-[#a06bff]">BAINES BLANTON</Link>
             <p className="text-center font-semibold tracking-widest text-[14px]">SOFTWARE ENGINEER</p>
             <div className="flex items-center gap-6 justify-end">
                 <div
@@ -32,12 +39,24 @@ export default function Navbar() {
                             key={label}
                             href={href}
                             onClick={() => setOpen(false)}
-                            className="cursor-pointer transition-colors duration-200 hover:text-[#001F3F]"
+                            className="cursor-pointer transition-colors duration-200 hover:text-[#001F3F] dark:hover:text-[#a06bff]"
                         >
                             {label}
                         </a>
                     ))}
                 </div>
+                <button
+                    type="button"
+                    onClick={() => setTheme(isDark ? "light" : "dark")}
+                    aria-label="Toggle dark mode"
+                    className="flex items-center justify-center w-[36px] h-[36px] rounded-full transition-colors duration-200 hover:text-[#001F3F] dark:hover:text-[#a06bff] cursor-pointer"
+                >
+                    {mounted ? (
+                        isDark ? <LuSun size={20} /> : <LuMoon size={20} />
+                    ) : (
+                        <span className="w-[20px] h-[20px]" />
+                    )}
+                </button>
                 <Hamburger toggled={isOpen} toggle={setOpen} size={24} color="#FFFFFF" />
             </div>
         </div>

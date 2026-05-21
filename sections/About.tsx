@@ -33,7 +33,7 @@ export default function About() {
                 className="w-full h-[220px] block -scale-y-100"
                 aria-hidden
             >
-                <path d="M0,200 C720,200 720,0 1440,0 L0,0 Z" fill="#750af5" />
+                <path d="M0,200 C720,200 720,0 1440,0 L0,0 Z" className="fill-[#750af5] dark:fill-[#4c0a99]" />
             </svg>
         </>
     );
