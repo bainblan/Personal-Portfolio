@@ -2,12 +2,12 @@ import Image, { type StaticImageData } from "next/image";
 import Navbar from "@/sections/Navbar";
 import Footer from "@/sections/Footer";
 import { Reveal, RevealGroup, RevealItem } from "@/components/Reveal";
-import ymp from "@/images/ympfaith.png";
-import knocklock from "@/images/knocklock.png";
-import bizniz from "@/images/biznizpic.png";
-import space from "@/images/ssrlinterviewproj.png";
-import harvest from "@/images/harvestathens.png";
-import ssrl from "@/images/cubesat.png";
+import ymp from "@/images/ympfaith.webp";
+import knocklock from "@/images/knocklock.webp";
+import bizniz from "@/images/biznizpic.webp";
+import space from "@/images/ssrlinterviewproj.webp";
+import harvest from "@/images/harvestathens.webp";
+import ssrl from "@/images/cubesat.webp";
 
 type Project = {
     name: string;
@@ -102,6 +102,7 @@ export default function ProjectsPage() {
                                         src={p.image}
                                         alt={p.name}
                                         fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                                     />
                                 </a>

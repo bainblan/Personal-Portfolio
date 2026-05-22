@@ -11,6 +11,7 @@ export default function Winner() {
                     <Image
                         src={hackathon}
                         alt="UGA Hacks XI award"
+                        sizes="(max-width: 768px) 100vw, 600px"
                         className="w-full h-auto rounded-[24px]"
                     />
                 </Reveal>

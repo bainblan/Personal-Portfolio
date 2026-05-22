@@ -67,6 +67,7 @@ export default function ExperiencePage() {
                                         src={exp.image}
                                         alt={exp.company}
                                         fill
+                                        sizes="(max-width: 768px) 100vw, 600px"
                                         className="object-cover transition-transform duration-500 group-hover:scale-110"
                                     />
                                     <div className="absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/60 flex items-center justify-center">

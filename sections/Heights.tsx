@@ -11,6 +11,7 @@ export default function Heights() {
                         src={mountain}
                         alt="Snowy mountain peak"
                         fill
+                        sizes="(max-width: 768px) 100vw, 600px"
                         className="object-cover"
                     />
                 </Reveal>

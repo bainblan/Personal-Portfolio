@@ -19,6 +19,7 @@ export default function About() {
                     <Image
                         src={headshot}
                         alt="Baines Blanton headshot"
+                        sizes="(max-width: 768px) 100vw, 500px"
                         className="w-full h-auto rounded-[24px]"
                     />
                 </Reveal>
