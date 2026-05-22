@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/sections/Navbar";
 import Footer from "@/sections/Footer";
+import { Reveal, RevealGroup, RevealItem } from "@/components/Reveal";
 import scruggs from "@/images/cpi_pic.jpg";
 import ssrlInAction from "@/images/ssrl_inaction.jpg";
 import rafbHighShot from "@/images/rafb_high_shot.jpg";
@@ -45,7 +46,9 @@ export default function ExperiencePage() {
             <Navbar />
             <main className="w-full">
                 <header className="px-6 md:px-[126px] pt-16 md:pt-[120px] pb-10 md:pb-[60px]">
-                    <h1 className="font-bold text-[48px] md:text-[96px] leading-[0.9]">EXPERIENCE</h1>
+                    <Reveal>
+                        <h1 className="font-bold text-[48px] md:text-[96px] leading-[0.9]">EXPERIENCE</h1>
+                    </Reveal>
                 </header>
                 <div className="flex flex-col gap-16 md:gap-[100px] px-6 md:px-[126px] pb-20 md:pb-[160px]">
                     {EXPERIENCES.map((exp, i) => (
@@ -53,30 +56,32 @@ export default function ExperiencePage() {
                             key={i}
                             className={`flex flex-col ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} items-center gap-8 md:gap-[60px]`}
                         >
-                            <Link
-                                href={exp.href}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="group relative block w-full md:flex-1 max-w-[600px] aspect-[4/3] overflow-hidden rounded-[24px]"
-                            >
-                                <Image
-                                    src={exp.image}
-                                    alt={exp.company}
-                                    fill
-                                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                                />
-                                <div className="absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/60 flex items-center justify-center">
-                                    <span className="text-white text-[20px] font-semibold tracking-wider opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                                        Visit Website &rarr;
-                                    </span>
-                                </div>
-                            </Link>
-                            <div className="w-full md:flex-1 max-w-[600px] flex flex-col gap-[12px] md:gap-[16px]">
-                                <h2 className="font-bold text-[32px] md:text-[48px] leading-[1]">{exp.company}</h2>
-                                <p className="text-[18px] md:text-[22px] font-medium italic opacity-80">{exp.jobTitle}</p>
-                                <p className="text-[12px] md:text-[13px] uppercase tracking-[0.2em] opacity-60">{exp.dates}</p>
-                                <p className="text-[16px] md:text-[18px] leading-relaxed">{exp.description}</p>
-                            </div>
+                            <Reveal className="w-full md:flex-1 max-w-[600px]">
+                                <Link
+                                    href={exp.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group relative block w-full aspect-[4/3] overflow-hidden rounded-[24px]"
+                                >
+                                    <Image
+                                        src={exp.image}
+                                        alt={exp.company}
+                                        fill
+                                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                    />
+                                    <div className="absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/60 flex items-center justify-center">
+                                        <span className="text-white text-[20px] font-semibold tracking-wider opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                                            Visit Website &rarr;
+                                        </span>
+                                    </div>
+                                </Link>
+                            </Reveal>
+                            <RevealGroup className="w-full md:flex-1 max-w-[600px] flex flex-col gap-[12px] md:gap-[16px]">
+                                <RevealItem as="h2" className="font-bold text-[32px] md:text-[48px] leading-[1]">{exp.company}</RevealItem>
+                                <RevealItem as="p" className="text-[18px] md:text-[22px] font-medium italic opacity-80">{exp.jobTitle}</RevealItem>
+                                <RevealItem as="p" className="text-[12px] md:text-[13px] uppercase tracking-[0.2em] opacity-60">{exp.dates}</RevealItem>
+                                <RevealItem as="p" className="text-[16px] md:text-[18px] leading-relaxed">{exp.description}</RevealItem>
+                            </RevealGroup>
                         </article>
                     ))}
                 </div>
